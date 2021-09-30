@@ -16,33 +16,42 @@
 
     <div class="container">
 
+        <!-- Top strip -->
+
         <div class="strip flexme contain_me white_txt">
             <div>
                 28th Sep 2021, Tuesday 06:05:34 PM IST
             </div>
         </div>
 
-        <div class="home_contain contain_me white_txt">
+         <!-- Navbar -->
 
-            <div class="nav flexme justifyme">
-                <div class="logo flexme">
-                    <img src="img/logo.svg" alt="deslize logo">
-                    Deslize
-                </div>
-                <div class="links flexme point_on">
-    
-                    <div>Latest</div>
-                    <div>Politics</div>
-                    <div>Business</div>
-                    <div>Entertainment</div>
-                    <div>More</div>
-    
-                </div>
-                <div class="cta">
-                    Sign up Newsletter
-                </div>
+         <div class="nav flexme justifyme white_txt">
+            <div class="logo flexme point_on">
+                <img src="img/logo.svg" alt="deslize logo">
+                Deslize
             </div>
+            <div class="links flexme point_on">
 
+                <div>Latest</div>
+                <div>Politics</div>
+                <div>Business</div>
+                <div>Entertainment</div>
+                <div>More</div>
+
+            </div>
+            <div class="cta point_on">
+                Sign up Newsletter
+            </div>
+        </div>
+
+
+        <!-- Website content -->
+
+        <!-- Page 1 -->
+
+        <div class="home_contain contain_me white_txt">     
+            
             <div class="home_content flexme">
 
                 <div class="landing_text">
@@ -60,16 +69,160 @@
 
             </div>
 
-            <div class="mouse">
-                
-            </div>
+            <div class="mouse"> </div>
 
         </div>
+
+        <!-- Page break -->
+
+        <div class="page_break "></div>
+
+        <!-- Page 2 -->
+
+        <div class="content_page contain_me img_page2">
+            <div class="heading">
+                LATEST
+            </div>
+
+            <div class="move_left point_on"></div>
+
+            <div class="carousel ">
+
+                <div class="card">
+
+                    <!-- top part -->
+                    <div class="top">
+                        <div class="thumbnail"></div>
+                        <div class="div"></div>
+                        <div class="title_info">
+    
+                            <div class="card_time"> <div class="dot"></div> 12:18 pm </div>
+    
+                            <div class="card_title">1 .Mumbai matchmaker told to refund money for 
+                                failing to provide promised suitors.
+                            </div>
+    
+                            <div class="card_info flexme">
+                                <div class="day">28 Sep 2021,Tuesday</div>
+                                <div class="author">- Shreyasi Banerjee</div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <!-- break -->
+                    <div class="story">Story:</div>
+
+                    <!-- bottom -->
+                    <div class="bottom">A consumer court has ordered a matchmaker from Mumbai 
+                        to refund ₹55,000 to a woman for failing to provide 15 suitors per month, 
+                        as promised. The matchmaker will also have to pay ₹5,000 as compensation. 
+                        The complainant and her father have been in touch with the matchmaker, 
+                        but the latter chose not to reply to their e-mails, the forum stated.
+                    </div>
+    
+                </div>
+
+                <div class="card">
+
+                    <!-- top part -->
+                    <div class="top">
+                        <div class="thumbnail"></div>
+                        <div class="div"></div>
+                        <div class="title_info">
+    
+                            <div class="card_time"> <div class="dot"></div> 12:18 pm </div>
+    
+                            <div class="card_title">2 .Mumbai matchmaker told to refund money for 
+                                failing to provide promised suitors.
+                            </div>
+    
+                            <div class="card_info flexme">
+                                <div class="day">28 Sep 2021,Tuesday</div>
+                                <div class="author">- Shreyasi Banerjee</div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <!-- break -->
+                    <div class="story">Story:</div>
+
+                    <!-- bottom -->
+                    <div class="bottom">A consumer court has ordered a matchmaker from Mumbai 
+                        to refund ₹55,000 to a woman for failing to provide 15 suitors per month, 
+                        as promised. The matchmaker will also have to pay ₹5,000 as compensation. 
+                        The complainant and her father have been in touch with the matchmaker, 
+                        but the latter chose not to reply to their e-mails, the forum stated.
+                    </div>
+    
+                </div>
+
+            </div>
+
+            <div class="move_right point_on"></div>
+
+            <!-- <div class="card">
+                <div class="top">
+                    <div class="thumbnail"></div>
+                    <div class="div"></div>
+                    <div class="title_info">
+
+                        <div class="card_time"> <div class="dot"></div> 12:18 pm </div>
+
+                        <div class="card_title">Mumbai matchmaker told to refund money for 
+                            failing to provide promised suitors.
+                        </div>
+
+                        <div class="card_info flexme">
+                            <div class="day">28 Sep 2021,Tuesday</div>
+                            <div class="author">- Shreyasi Banerjee</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="story">Story:</div>
+                <div class="bottom">A consumer court has ordered a matchmaker from Mumbai 
+                    to refund ₹55,000 to a woman for failing to provide 15 suitors per month, 
+                    as promised. The matchmaker will also have to pay ₹5,000 as compensation. 
+                    The complainant and her father have been in touch with the matchmaker, 
+                    but the latter chose not to reply to their e-mails, the forum stated.
+                </div>
+
+            </div> -->
+        
+            
+            
+        </div>
+
+        <!-- Page break -->
+
+        <div class="page_break"></div>
+        
 
 
 
 
     </div>
+
+
+    <!-- Functional scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        const btn_right = $(".move_right");
+        const btn_left = $(".move_left");
+
+        $(btn_right).on("click", function () {
+            console.log(this);
+        });
+
+        $(btn_left).on("click", function () {
+            console.log(this);
+        });
+
+    </script>
 
     
 </body>

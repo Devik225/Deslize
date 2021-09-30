@@ -1,0 +1,137 @@
+/* Universal------------------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Mukta", sans-serif;
+  letter-spacing: 0.01vw;
+}
+
+.contain_me {
+  padding-left: 6.6vw;
+  padding-right: 6.6vw;
+}
+
+.flexme {
+  display: flex;
+  align-items: center;
+}
+
+.justifyme {
+  justify-content: space-between;
+}
+
+.white_txt {
+  color: white;
+}
+
+.point_on {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Home---------------------------------------------------------------------------------------- */
+
+.strip {
+  font-size: 0.9vw;
+  background-color: #060f10;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+
+.home_contain {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  height: 60vw;
+  background-image: url("css_img/home_bg.svg");
+  background-repeat: no-repeat;
+}
+
+/* Navbar */
+
+.nav {
+  margin-top: 4.35vw;
+}
+
+.logo {
+  font-size: 1.5vw;
+}
+
+.logo img {
+  margin-right: 0.5vw;
+}
+
+.links {
+  font-size: 1.12vw;
+}
+
+.links div {
+  position: relative;
+  right: 4vw;
+  opacity: 0.6;
+  font-weight: 300;
+  margin-right: 4.5vw;
+}
+
+.cta {
+  font-size: 1vw;
+  background-color: rgba(255, 255, 255, 0.705);
+  border-radius: 25px;
+  color: #000d11;
+  font-weight: 600;
+  padding: 0.25vw 1vw 0.25vw 1vw;
+  border: 2px solid #000d11;
+}
+
+/* Home page content */
+
+.landing_text {
+  margin-top: 11vw;
+}
+
+.small_title {
+  font-size: 2vw;
+}
+
+.large_title {
+  margin-top: -0.8vw;
+  font-size: 3.4vw;
+  font-weight: 600;
+}
+
+.content_title {
+  text-align: justify;
+  font-size: 1.3vw;
+  font-weight: 300;
+  opacity: 0.6;
+  width: 33vw;
+}
+
+/* Mouse scroll animation */
+
+.mouse {
+  width: 1.8vw;
+  height: 3vw;
+  background-image: url("css_img/mouse.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: 8vw;
+  animation: up 3s infinite;
+  -webkit-animation: up 3s infinite;
+}
+
+@keyframes up {
+  50% {
+    top: 10vw;
+  }
+  100% {
+    top: 8vw;
+  }
+}

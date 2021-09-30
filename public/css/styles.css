@@ -169,8 +169,12 @@ body {
   overflow: hidden;
 }
 
-.move_left,
-.move_right {
+.move_left1,
+.move_left2,
+.move_left3,
+.move_right1,
+.move_right2,
+.move_right3 {
   width: 3vw;
   height: 3vw;
   position: absolute;
@@ -178,29 +182,45 @@ body {
   top: 22vw;
 }
 
-.move_left {
+.move_left1,
+.move_left2,
+.move_left3 {
   background-image: url("css_img/left.svg");
   left: 6vw;
 }
 
-.move_right {
+.move_right1,
+.move_right2,
+.move_right3 {
   background-image: url("css_img/right.svg");
   right: 6vw;
 }
 
-/* Main news card styles --------------------------------------------------- */
+/* JS dependencies -------------------------------------------------- */
 
-/* .card {
-  transform: translateX(-50vw);
+/* .move_forward {
+  
+}
+
+.move_backward {
+  transform: translateX(50vw);
 } */
 
-.card {
+/* JS dependencies END -------------------------------------------------- */
+
+/* Main news card styles --------------------------------------------------- */
+
+.card1,
+.card2,
+.card3 {
   padding: 1vw;
   width: 50vw;
   height: 22vw;
   background-color: rgba(255, 255, 255, 0.904);
   border-radius: 0.3vw;
   margin-right: 3vw;
+  transform: translateX(0);
+  transition: 1.5s ease;
 }
 
 /* top part */
@@ -281,4 +301,20 @@ body {
 
 .img_page2 {
   background-image: url("css_img/latest_bg.svg");
+}
+
+/* Page 3 */
+
+.img_page3 {
+  background-image: url("css_img/politics.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Page 4 */
+
+.img_page4 {
+  background-image: url("css_img/business.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

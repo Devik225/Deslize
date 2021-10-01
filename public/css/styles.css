@@ -397,3 +397,32 @@ body {
 .auto_card {
   background-image: url("css_img/auto_card.svg");
 }
+
+/* Page 6 */
+
+.newsletter_page {
+  background-size: contain;
+  position: relative;
+  height: 50vw;
+}
+
+.img_newsletter {
+  background-image: url("css_img/newsletter_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.news_head {
+  color: white;
+  text-align: center;
+  padding-top: 3vw;
+  font-size: 3.3vw;
+  font-weight: 600;
+}
+
+/* Footer */
+
+.footer {
+  height: 6vw;
+  background-color: #00030c;
+}

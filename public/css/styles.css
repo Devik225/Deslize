@@ -169,6 +169,8 @@ body {
   overflow: hidden;
 }
 
+/* Multiple icons to switch in javascript */
+
 .move_left1,
 .move_left2,
 .move_left3,
@@ -318,3 +320,31 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* Page 5 */
+
+.categories_page {
+  background-image: url("css_img/category.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 66vw;
+}
+
+.all_category {
+  position: absolute;
+  top: 11vw;
+  display: grid;
+  grid-template-columns: repeat(3, 30vw);
+}
+
+.category {
+  height: 15vw;
+  width: 27vw;
+  margin-right: 2vw;
+  margin-bottom: 3vw;
+  background-color: aliceblue;
+  border-radius: 0.3vw;
+}
+
+.

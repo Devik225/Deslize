@@ -339,12 +339,61 @@ body {
 }
 
 .category {
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 15vw;
   width: 27vw;
   margin-right: 2vw;
   margin-bottom: 3vw;
   background-color: aliceblue;
   border-radius: 0.3vw;
+  transition: all 1s;
 }
 
-.
+.category:hover {
+  filter: brightness(1.4);
+  -webkit-filter: brightness(1.4);
+}
+
+.card_heading {
+  color: rgba(255, 255, 255, 0.781);
+  font-size: 1.45vw;
+  margin-left: 1.3vw;
+  margin-top: 1.2vw;
+}
+
+.latest_card {
+  background-image: url("css_img/latest_card.svg");
+}
+
+.politics_card {
+  background-image: url("css_img/politics_card.svg");
+}
+
+.business_card {
+  background-image: url("css_img/business_card.svg");
+}
+
+.sports_card {
+  background-image: url("css_img/sports_card.svg");
+}
+
+.science_card {
+  background-image: url("css_img/science_card.svg");
+}
+
+.tech_card {
+  background-image: url("css_img/tech_card.svg");
+}
+
+.startup_card {
+  background-image: url("css_img/startup_card.svg");
+}
+
+.entertainment_card {
+  background-image: url("css_img/entertainment_card.svg");
+}
+
+.auto_card {
+  background-image: url("css_img/auto_card.svg");
+}

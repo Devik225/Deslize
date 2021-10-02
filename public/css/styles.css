@@ -426,3 +426,24 @@ body {
   height: 6vw;
   background-color: #00030c;
 }
+
+/* News pages */
+
+.movedown {
+  top: 20vw;
+}
+
+.movedown_arrow {
+  top: 30vw;
+}
+
+.hideme {
+  height: 100vh;
+}
+
+.news_contain {
+  height: 52vw;
+  background-image: url("css_img/home_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

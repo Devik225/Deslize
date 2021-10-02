@@ -12,6 +12,10 @@ app.get("/", (req, res)=>{
     res.render("Home", {});
 })
 
+app.get("/news", (req, res)=>{
+    res.render("news", {});
+})
+
 
 app.listen(4000, ()=>{
     console.log("listening");

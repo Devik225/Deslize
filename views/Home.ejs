@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
-    </style>
 
-    <title>Deslize</title>
-</head>
-<body>
+<!-- header file -->
+<%- include("header") -%>
+
 
     <div class="container">
 
@@ -333,71 +322,6 @@
     </div>
 
 
-    <!-- Functional scripts -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <script>
-
-        const carousel1 = $(".card1");
-        const carousel2 = $(".card2");
-        const carousel3 = $(".card3");        
-
-
-        for(let i=1; i<=3; i++){
-
-            const btn_right = ".move_right" + i;
-            const btn_left = ".move_left" + i;
-            const carousel = ".card" + i;
-            $(btn_left).css("opacity", "0.2");
-            $(btn_left).css("opacity", "0.2");
-            $(btn_left).css("opacity", "0.2");
-            let value=0;
-
-            $(btn_right).on("click", function () {
-
-                var total_cards;
-                if(i == 1){
-                    total_cards = carousel1.length;
-                }
-                else if(i == 2){
-                    total_cards = carousel2.length;
-                }
-                else if(i == 3){
-                    total_cards = carousel3.length;
-                }
-                // console.log(total_cards);
-                value=value-55;
-                console.log(value);
-                if((total_cards-1) * -55 >= value){
-                    $(btn_right).css("opacity", "0.2");
-                    value = (total_cards-1) * -55;
-                }
-
-                $(btn_left).css("opacity", "1");
-                $(carousel).css("transform", "translateX(" + value + "vw)");           
-
-            });
-
-            $(btn_left).on("click", function () {
-
-                value=value+55;
-                if(value >= 0){
-                    $(btn_left).css("opacity", "0.2");
-                    value=0;
-                }
-
-                $(btn_right).css("opacity", "1");
-                $(carousel).css("transform", "translateX(" + value + "vw)");           
-
-            });
-        };
-
-
-
-
-    </script>
-
-    
-</body>
-</html>
+<!-- footer file -->
+<%- include("footer") -%>

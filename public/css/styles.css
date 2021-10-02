@@ -37,8 +37,11 @@ body {
 /* Home---------------------------------------------------------------------------------------- */
 
 .strip {
+  position: absolute;
+  left: 0;
+  right: 0;
   font-size: 0.9vw;
-  background-color: #060f10;
+  background-color: #060f10b4;
   padding-top: 0.5vw;
   padding-bottom: 0.5vw;
 }
@@ -430,20 +433,40 @@ body {
 /* News pages */
 
 .movedown {
-  top: 20vw;
+  top: 38vh;
 }
 
 .movedown_arrow {
   top: 30vw;
 }
 
-.hideme {
-  height: 100vh;
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: hidden;
 }
 
 .news_contain {
   height: 52vw;
-  background-image: url("css_img/home_bg.svg");
+  background-image: url("css_img/politics.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.news--head {
+  padding-top: 17vh;
+  font-size: 4.5vw;
+  opacity: 0.35;
+  font-weight: 700;
+  color: white;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  font-size: 1.5vw;
 }

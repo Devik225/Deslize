@@ -48,7 +48,7 @@ body {
 
 .home_contain {
   height: 52vw;
-  background-image: url("css_img/home_bg.svg");
+  background-image: url("css_img/background images_c/home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -367,39 +367,39 @@ body {
 }
 
 .latest_card {
-  background-image: url("css_img/latest_card.svg");
+  background-image: url("css_img/cards/latest.jpg");
 }
 
 .politics_card {
-  background-image: url("css_img/politics_card.svg");
+  background-image: url("css_img/cards/politics.jpg");
 }
 
 .business_card {
-  background-image: url("css_img/business_card.svg");
+  background-image: url("css_img/cards/business.jpg");
 }
 
 .sports_card {
-  background-image: url("css_img/sports_card.svg");
+  background-image: url("css_img/cards/sports.jpg");
 }
 
 .science_card {
-  background-image: url("css_img/science_card.svg");
+  background-image: url("css_img/cards/science.jpg");
 }
 
 .tech_card {
-  background-image: url("css_img/tech_card.svg");
+  background-image: url("css_img/cards/tech.jpg");
 }
 
 .startup_card {
-  background-image: url("css_img/startup_card.svg");
+  background-image: url("css_img/cards/startup.jpg");
 }
 
 .entertainment_card {
-  background-image: url("css_img/entertainment_card.svg");
+  background-image: url("css_img/cards/entertainment.jpg");
 }
 
 .auto_card {
-  background-image: url("css_img/auto_card.svg");
+  background-image: url("css_img/cards/auto.jpg");
 }
 
 /* Page 6 */
@@ -407,11 +407,11 @@ body {
 .newsletter_page {
   background-size: contain;
   position: relative;
-  height: 50vw;
+  height: 44vw;
 }
 
 .img_newsletter {
-  background-image: url("css_img/newsletter_bg.svg");
+  background-image: url("css_img/background images_c/newsletter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -419,7 +419,7 @@ body {
 .news_head {
   color: white;
   text-align: center;
-  padding-top: 3vw;
+  padding-top: 2.8vw;
   font-size: 3.3vw;
   font-weight: 600;
 }
@@ -427,7 +427,7 @@ body {
 /* Footer */
 
 .footer {
-  height: 6vw;
+  height: 5vw;
   background-color: #00030c;
 }
 

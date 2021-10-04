@@ -91,7 +91,7 @@ body {
   color: #000d11c2;
   font-weight: 700;
   padding: 0.25vw 1vw 0.25vw 1vw;
-  border: 2px solid #000d11da;
+  border: 0.2vw solid #000d11da;
 }
 
 /* Home page content */
@@ -222,7 +222,7 @@ body {
   padding: 1vw;
   width: 50vw;
   height: 22vw;
-  background-color: rgba(255, 255, 255, 0.904);
+  background-color: rgba(255, 255, 255, 0.819);
   border-radius: 0.3vw;
   margin-right: 3vw;
   transform: translateX(0);

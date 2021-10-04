@@ -20,3 +20,22 @@ app.get("/news", (req, res)=>{
 app.listen(4000, ()=>{
     console.log("listening");
 })
+
+
+//API
+// https://inshortsapi.vercel.app/news?category=all
+
+//Categories
+// all
+// national //Indian News only
+// business
+// sports
+// world
+// politics
+// technology
+// startup
+// entertainment
+// miscellaneous
+// hatke
+// science
+// automobile

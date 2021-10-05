@@ -91,7 +91,7 @@ body {
   right: 4vw;
   opacity: 0.6;
   font-weight: 300;
-  margin-right: 4.5vw;
+  padding-right: 4.5vw;
   transition: opacity 0.5s;
 }
 
@@ -101,12 +101,18 @@ body {
 
 .cta {
   font-size: 1vw;
-  background-color: rgba(255, 255, 255, 0.605);
+  background-color: rgba(255, 255, 255, 0.55);
   border-radius: 25px;
   color: #000d11c2;
   font-weight: 700;
   padding: 0.25vw 1vw 0.25vw 1vw;
   border: 0.2vw solid #000d11da;
+  transition: all 0.3s;
+}
+
+.cta:hover {
+  background-color: rgba(255, 255, 255, 0.705);
+  border-radius: 25px;
 }
 
 /* Home page content */

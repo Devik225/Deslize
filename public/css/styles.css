@@ -1,4 +1,7 @@
 /* Universal------------------------------------------------------------------------------- */
+* {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -76,12 +79,24 @@ body {
   font-size: 1.12vw;
 }
 
+.links a,
+.all_category a,
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
 .links div {
   position: relative;
   right: 4vw;
   opacity: 0.6;
   font-weight: 300;
   margin-right: 4.5vw;
+  transition: opacity 0.5s;
+}
+
+.links div:hover {
+  opacity: 0.8;
 }
 
 .cta {
@@ -337,7 +352,7 @@ body {
 
 .all_category {
   position: absolute;
-  top: 11vw;
+  top: 10vw;
   display: grid;
   grid-template-columns: repeat(3, 30vw);
 }

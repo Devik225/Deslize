@@ -60,8 +60,15 @@
 
         const news_bg = $(".news--head").text();
         const name = news_bg.toLowerCase();
-        $(".news_contain").css("background-image", 'url("css_img/background images_c/business.jpg")');
-        console.log(name);
+
+        // const imageUrl = "css/css_img/background%20images_c/technology.jpg";
+
+        var l = name.length;
+        var n = name.slice(1, l);
+        
+        const imageUrl = "css/css_img/background%20images_c/"+n+".jpg";
+
+        $(".news_contain").css("background-image", "url(" + imageUrl + ")");
 
     </script>
     

@@ -43,7 +43,7 @@
             <!-- Cards -->
             <div class="carousel movedown ">
 
-            <%for(let i=0; i<24; i++){%>
+            <% ejs_data.data.forEach((data)=>{ %>
 
                 <div class="card1">
 
@@ -53,15 +53,14 @@
                         <div class="div"></div>
                         <div class="title_info">
     
-                            <div class="card_time"> <div class="dot"></div> 12:18 pm </div>
+                            <div class="card_time"> <div class="dot"></div> <%= data.time %> </div>
     
-                            <div class="card_title">1 .Mumbai matchmaker told to refund money for 
-                                failing to provide promised suitors.
+                            <div class="card_title"> <%= data.title %>  
                             </div>
     
                             <div class="card_info flexme">
-                                <div class="day">28 Sep 2021,Tuesday</div>
-                                <div class="author">- Shreyasi Banerjee</div>
+                                <div class="day"> <%= data.date %> </div>
+                                <div class="author">- <%= data.author %></div>
                             </div>
     
                         </div>
@@ -71,16 +70,13 @@
                     <div class="story">Story:</div>
 
                     <!-- bottom -->
-                    <div class="bottom">A consumer court has ordered a matchmaker from Mumbai 
-                        to refund ₹55,000 to a woman for failing to provide 15 suitors per month, 
-                        as promised. The matchmaker will also have to pay ₹5,000 as compensation. 
-                        The complainant and her father have been in touch with the matchmaker, 
-                        but the latter chose not to reply to their e-mails, the forum stated.
+                    <div class="bottom"><%= data.content %>
                     </div>
     
                 </div>
 
-            <%}%>
+            <%})%>
+
 
             </div>
 

@@ -12,15 +12,17 @@ import _ from "lodash";
 
 //All api data
 
-let latest_data;
-let politics_data;
-let business_data;
-let sports_data;
-let science_data;
-let technology_data;
-let startup_data;
-let entertainment_data;
-let automobile_data;
+var fetched_data = []; 
+
+// let latest_data;
+// let politics_data;
+// let business_data;
+// let sports_data;
+// let science_data;
+// let technology_data;
+// let startup_data;
+// let entertainment_data;
+// let automobile_data;
 
 
 //Js render scripts
@@ -36,8 +38,19 @@ app.get("/", (req, res)=>{
 
 app.get("/:category_name", (req, res)=>{
     const category = req.params.category_name;
-    console.log(category);
-    res.render("news", {ejs_section_name : _.startCase(_.toLower(category))});
+    let category_data;
+
+    fetched_data.forEach((data)=>{
+        if(data.category === category || data.category === "national" && category === "latest"){
+            // console.log(data.category);
+            category_data = data;
+        }
+    });
+    // console.log(fetched_data[1].category);
+    res.render("news", {
+        ejs_section_name : _.startCase(_.toLower(category)),
+        ejs_data : category_data
+    });
 })
 
 
@@ -46,9 +59,9 @@ app.listen(4000, ()=>{
 })
 
 
+
 //Fetching data
 
-var fetched_data = []; 
 const urls = ["https://inshortsapi.vercel.app/news?category=national"];
 let link = "https://inshortsapi.vercel.app/news?category=";
 
@@ -73,17 +86,13 @@ for(var i=0; i<9; i++){
     .then((data)=>{
 
         fetched_data.push(data)
-        console.log(fetched_data);
+        // console.log(fetched_data);
     })
     .catch((err)=>{
         console.log(err);
     })
 };
 
-
-
-
-console.log(latest_data);
 
 //API -------------------------------------------------------------------------------------------------------------------------
 // https://inshortsapi.vercel.app/news?category=all

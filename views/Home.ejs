@@ -82,44 +82,42 @@
             <!-- Cards -->
             <div class="carousel ">
 
-            <%for(let i=0; i<24; i++){%>
+                <% ejs_latest_data.data.forEach((data)=>{ %>
 
-                <div class="card1">
-
-                    <!-- top part -->
-                    <div class="top">
-                        <div class="thumbnail"></div>
-                        <div class="div"></div>
-                        <div class="title_info">
+                    <div class="card1">
     
-                            <div class="card_time"> <div class="dot"></div> 12:18 pm </div>
+                        <!-- top part -->
+                        <div class="top">
     
-                            <div class="card_title">1 .Mumbai matchmaker told to refund money for 
-                                failing to provide promised suitors.
+                            <div class="thumbnail">
+                                <img class="thumbnail_image" src=<%= data.imageUrl%>></img>
+                            </div>                        
+                            <div class="div"></div>
+                            <div class="title_info">
+        
+                                <div class="card_time"> <div class="dot"></div> <%= data.time %> </div>
+        
+                                <div class="card_title"> <%= data.title %>  
+                                </div>
+        
+                                <div class="card_info flexme">
+                                    <div class="day"> <%= data.date %> </div>
+                                    <div class="author">- <%= data.author %></div>
+                                </div>
+        
                             </div>
-    
-                            <div class="card_info flexme">
-                                <div class="day">28 Sep 2021,Tuesday</div>
-                                <div class="author">- Shreyasi Banerjee</div>
-                            </div>
-    
                         </div>
-                    </div>
-
-                    <!-- break -->
-                    <div class="story">Story:</div>
-
-                    <!-- bottom -->
-                    <div class="bottom">A consumer court has ordered a matchmaker from Mumbai 
-                        to refund ₹55,000 to a woman for failing to provide 15 suitors per month, 
-                        as promised. The matchmaker will also have to pay ₹5,000 as compensation. 
-                        The complainant and her father have been in touch with the matchmaker, 
-                        but the latter chose not to reply to their e-mails, the forum stated.
+    
+                        <!-- break -->
+                        <div class="story">Story:</div>
+    
+                        <!-- bottom -->
+                        <div class="bottom"><%= data.content %>
+                        </div>
+        
                     </div>
     
-                </div>
-
-            <%}%>
+                <%})%>
 
             </div>
 
@@ -146,44 +144,42 @@
             <!-- Cards -->
             <div class="carousel ">
 
-            <%for(let i=0; i<25; i++){%>
+                <% ejs_politics_data.data.forEach((data)=>{ %>
 
-                <div class="card2">
-
-                    <!-- top part -->
-                    <div class="top">
-                        <div class="thumbnail"></div>
-                        <div class="div"></div>
-                        <div class="title_info">
+                    <div class="card2">
     
-                            <div class="card_time"> <div class="dot"></div> 12:18 pm </div>
+                        <!-- top part -->
+                        <div class="top">
     
-                            <div class="card_title">1 .Mumbai matchmaker told to refund money for 
-                                failing to provide promised suitors.
+                            <div class="thumbnail">
+                                <img class="thumbnail_image" src=<%= data.imageUrl%>></img>
+                            </div>                        
+                            <div class="div"></div>
+                            <div class="title_info">
+        
+                                <div class="card_time"> <div class="dot"></div> <%= data.time %> </div>
+        
+                                <div class="card_title"> <%= data.title %>  
+                                </div>
+        
+                                <div class="card_info flexme">
+                                    <div class="day"> <%= data.date %> </div>
+                                    <div class="author">- <%= data.author %></div>
+                                </div>
+        
                             </div>
-    
-                            <div class="card_info flexme">
-                                <div class="day">28 Sep 2021,Tuesday</div>
-                                <div class="author">- Shreyasi Banerjee</div>
-                            </div>
-    
                         </div>
-                    </div>
-
-                    <!-- break -->
-                    <div class="story">Story:</div>
-
-                    <!-- bottom -->
-                    <div class="bottom">A consumer court has ordered a matchmaker from Mumbai 
-                        to refund ₹55,000 to a woman for failing to provide 15 suitors per month, 
-                        as promised. The matchmaker will also have to pay ₹5,000 as compensation. 
-                        The complainant and her father have been in touch with the matchmaker, 
-                        but the latter chose not to reply to their e-mails, the forum stated.
+    
+                        <!-- break -->
+                        <div class="story">Story:</div>
+    
+                        <!-- bottom -->
+                        <div class="bottom"><%= data.content %>
+                        </div>
+        
                     </div>
     
-                </div>
-
-            <%}%>
+                <%})%>
 
             </div>
 
@@ -210,44 +206,42 @@
                 <!-- Cards -->
                 <div class="carousel ">
     
-                <%for(let i=0; i<25; i++){%>
-    
-                    <div class="card3">
-    
-                        <!-- top part -->
-                        <div class="top">
-                            <div class="thumbnail"></div>
-                            <div class="div"></div>
-                            <div class="title_info">
+                    <% ejs_business_data.data.forEach((data)=>{ %>
+
+                        <div class="card3">
         
-                                <div class="card_time"> <div class="dot"></div> 12:18 pm </div>
+                            <!-- top part -->
+                            <div class="top">
         
-                                <div class="card_title">1 .Mumbai matchmaker told to refund money for 
-                                    failing to provide promised suitors.
+                                <div class="thumbnail">
+                                    <img class="thumbnail_image" src=<%= data.imageUrl%>></img>
+                                </div>                        
+                                <div class="div"></div>
+                                <div class="title_info">
+            
+                                    <div class="card_time"> <div class="dot"></div> <%= data.time %> </div>
+            
+                                    <div class="card_title"> <%= data.title %>  
+                                    </div>
+            
+                                    <div class="card_info flexme">
+                                        <div class="day"> <%= data.date %> </div>
+                                        <div class="author">- <%= data.author %></div>
+                                    </div>
+            
                                 </div>
-        
-                                <div class="card_info flexme">
-                                    <div class="day">28 Sep 2021,Tuesday</div>
-                                    <div class="author">- Shreyasi Banerjee</div>
-                                </div>
-        
                             </div>
-                        </div>
-    
-                        <!-- break -->
-                        <div class="story">Story:</div>
-    
-                        <!-- bottom -->
-                        <div class="bottom">A consumer court has ordered a matchmaker from Mumbai 
-                            to refund ₹55,000 to a woman for failing to provide 15 suitors per month, 
-                            as promised. The matchmaker will also have to pay ₹5,000 as compensation. 
-                            The complainant and her father have been in touch with the matchmaker, 
-                            but the latter chose not to reply to their e-mails, the forum stated.
+        
+                            <!-- break -->
+                            <div class="story">Story:</div>
+        
+                            <!-- bottom -->
+                            <div class="bottom"><%= data.content %>
+                            </div>
+            
                         </div>
         
-                    </div>
-    
-                <%}%>
+                    <%})%>
     
                 </div>
     

@@ -258,8 +258,15 @@ body {
 
 /* Top left */
 .thumbnail {
+  display: flex;
+  align-items: center;
   height: 12vw;
-  background-color: rgb(44, 44, 44);
+  overflow: hidden;
+  background-color: rgb(187, 187, 187);
+}
+
+.thumbnail_image {
+  width: 100%;
 }
 
 /* Top right */
@@ -280,12 +287,12 @@ body {
 }
 
 .card_time {
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-weight: 600;
 }
 
 .card_title {
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   font-weight: 600;
   color: #001214;
 }
@@ -304,7 +311,7 @@ body {
 }
 
 .author {
-  margin-left: 10vw;
+  margin-left: 9vw;
 }
 
 /* Middle break */

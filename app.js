@@ -14,16 +14,6 @@ import _ from "lodash";
 
 var fetched_data = []; 
 
-// let latest_data;
-// let politics_data;
-// let business_data;
-// let sports_data;
-// let science_data;
-// let technology_data;
-// let startup_data;
-// let entertainment_data;
-// let automobile_data;
-
 
 //Js render scripts
 
@@ -33,7 +23,28 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 app.get("/", (req, res)=>{
-    res.render("Home", {});
+
+    let data_latest;
+    let data_politics;
+    let data_business;
+
+    fetched_data.forEach((data)=>{
+        if(data.category === "national"){
+            data_latest = data;
+        }
+        else if(data.category === "politics"){
+            data_politics = data;
+        }
+        else if(data.category === "business"){
+            data_business = data;
+        }
+    });
+
+    res.render("Home", {
+        ejs_latest_data : data_latest,
+        ejs_politics_data : data_politics,
+        ejs_business_data : data_business
+    });
 })
 
 app.get("/:category_name", (req, res)=>{
@@ -74,9 +85,6 @@ urls.push(link + "startup");
 urls.push(link + "entertainment");
 urls.push(link + "automobile");
 
-
-const all_category = ["latest_data", "politics_data", "business_data", "sports_data", "science_data", 
-                "technology_data", "startup_data", "entertainment_data", "automobile_data"];
 
 for(var i=0; i<9; i++){
     fetch(urls[i])

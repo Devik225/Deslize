@@ -453,14 +453,54 @@ body {
   padding-top: 2.8vw;
   font-size: 3.3vw;
   font-weight: 600;
+  margin-bottom: 4vw;
 }
 
 .newsletter_form {
+  margin-top: 3vw;
+  height: 23vw;
   flex-direction: column;
-  background-color: #b4b4b470;
+  background-color: #b4b4b490;
+  margin: auto;
   width: fit-content;
-  padding: 1vw;
-  border-radius: 5px;
+  padding: 0.8vw;
+  border-radius: 0.3vw;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(32, 32, 32);
+  font-size: 1.2vw;
+  font-weight: 300;
+  opacity: 0.6; /* Firefox */
+}
+
+input {
+  font-size: 1.3vw;
+  margin-top: 2.5vw;
+  width: 25vw;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #000411;
+  border-bottom: 0.155vw solid #312f2f;
+}
+
+button {
+  margin-top: 2.2vw;
+  font-size: 1.2vw;
+  width: 26vw;
+  background-color: #000411;
+  color: white;
+  border: none;
+  border-radius: 0.3vw;
+  padding-top: 1.1vw;
+  padding-bottom: 1.1vw;
 }
 
 /* Footer */

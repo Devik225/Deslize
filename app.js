@@ -49,7 +49,7 @@ app.get("/", (req, res)=>{
 
 app.get("/:category_name", (req, res)=>{
     const category = req.params.category_name;
-    let category_data;
+    let category_data = "error";
 
     fetched_data.forEach((data)=>{
         if(data.category === category || data.category === "all" && category === "latest"){
@@ -58,10 +58,17 @@ app.get("/:category_name", (req, res)=>{
         }
     });
     // console.log(fetched_data[1].category);
-    res.render("news", {
-        ejs_section_name : _.startCase(_.toLower(category)),
-        ejs_data : category_data
-    });
+
+    if(category_data == "error"){
+        res.render("error", {});
+    }
+    else{
+        res.render("news", {
+            ejs_section_name : _.startCase(_.toLower(category)),
+            ejs_data : category_data
+        });
+    }
+
 })
 
 

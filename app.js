@@ -29,7 +29,7 @@ app.get("/", (req, res)=>{
     let data_business;
 
     fetched_data.forEach((data)=>{
-        if(data.category === "national"){
+        if(data.category === "all"){
             data_latest = data;
         }
         else if(data.category === "politics"){
@@ -52,7 +52,7 @@ app.get("/:category_name", (req, res)=>{
     let category_data;
 
     fetched_data.forEach((data)=>{
-        if(data.category === category || data.category === "national" && category === "latest"){
+        if(data.category === category || data.category === "all" && category === "latest"){
             // console.log(data.category);
             category_data = data;
         }
@@ -73,7 +73,7 @@ app.listen(4000, ()=>{
 
 //Fetching data
 
-const urls = ["https://inshortsapi.vercel.app/news?category=national"];
+const urls = ["https://inshortsapi.vercel.app/news?category=all"];
 let link = "https://inshortsapi.vercel.app/news?category=";
 
 urls.push(link + "politics");

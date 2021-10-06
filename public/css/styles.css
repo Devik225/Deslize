@@ -186,7 +186,7 @@ body {
 
 .carousel {
   display: grid;
-  grid-template-columns: repeat(25, 1fr);
+  grid-template-columns: repeat(50, 1fr);
   position: absolute;
   top: 13vw;
   left: 12vw;
@@ -267,6 +267,10 @@ body {
 
 .thumbnail_image {
   width: 100%;
+  opacity: 0.9;
+  filter: brightness(0.4);
+  filter: contrast(1.2);
+  -webkit-filter: contrast(1.2);
 }
 
 /* Top right */
@@ -298,7 +302,6 @@ body {
 }
 
 .card_info {
-  justify-content: space-between;
   position: absolute;
   bottom: 0;
   /* top: 1.6vw; */
@@ -311,7 +314,7 @@ body {
 }
 
 .author {
-  margin-left: 9vw;
+  margin-left: 8.5vw;
 }
 
 /* Middle break */
@@ -452,11 +455,47 @@ body {
   font-weight: 600;
 }
 
+.newsletter_form {
+  flex-direction: column;
+  background-color: #b4b4b470;
+  width: fit-content;
+  padding: 1vw;
+  border-radius: 5px;
+}
+
 /* Footer */
 
 .footer {
+  position: relative;
   height: 5vw;
   background-color: #00030c;
+}
+
+.social_media {
+  position: relative;
+  top: 0.4vw;
+  align-items: center;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.s_icon {
+  opacity: 0.7;
+  margin-left: 1.5vw;
+  transition: opacity 0.5s ease;
+  font-size: 2vw !important;
+}
+
+.s_icon:hover {
+  opacity: 0.9;
+}
+
+.my_name {
+  font-size: 0.6vw;
+  color: white;
+  position: absolute;
+  right: 0.6vw;
+  bottom: 0.6vw;
 }
 
 /* News pages */

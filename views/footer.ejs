@@ -70,6 +70,30 @@
 
         $(".news_contain").css("background-image", "url(" + imageUrl + ")");
 
+        //Time update
+        // 28th Sep 2021, Tuesday 06:05:34 PM IST
+
+        function updateClock(){
+            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const d = new Date();
+
+            const nDate = new Date().toLocaleTimeString('en-US', {
+                timeZone: 'Asia/Calcutta', hours:'long'
+            });
+
+            // var time = 
+
+            var date = d.getDate()+ "th" + " " + month[d.getMonth()] + " " + d.getFullYear() + ", "+ " " + nDate + " IST";
+            // var time = nDate.slice(0, -6) +" " + nDate.slice(-2);
+            document.getElementById("time").textContent = date;
+
+        }
+
+        function timeinit(){
+            updateClock();
+            window.setInterval("updateClock()", 1);
+        }
+
     </script>
     
 </body>

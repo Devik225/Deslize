@@ -154,7 +154,7 @@ body {
   position: relative;
   width: 100%;
   height: 40%;
-  overflow: hidden;
+  overflow: scroll;
   display: grid;
   grid-template-columns: repeat(6, 15.8vw);
 }
@@ -163,7 +163,7 @@ body {
   margin-top: 0.8vw;
   width: 100%;
   height: 56%;
-  overflow: hidden;
+  overflow: scroll;
   display: grid;
   grid-template-columns: repeat(6, 20.8vw);
 }
@@ -186,9 +186,10 @@ body {
 .home_crsl_img {
   /*height: 100%;
   */
-  filter: contrast(1.1);
-  width: 150%;
-  -webkit-filter: contrast(1.1);
+  width: 100%;
+  filter: brightness(0.8);
+  filter: contrast(1.5);
+  -webkit-filter: brightness(0.8);
 }
 
 /* Mouse scroll animation */

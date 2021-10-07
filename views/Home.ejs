@@ -3,6 +3,10 @@
 <%- include("header") -%>
 
 
+<div class="mob">
+    <h1>Work under progress for mobile view</h1>
+</div>
+
     <div class="">
 
         <!-- Top strip -->
@@ -18,7 +22,7 @@
          <div class="nav flexme justifyme white_txt">
             <div class="logo flexme point_on">
                 <img src="img/logo.svg" alt="deslize logo">
-                Deslize
+                <a href="/">Deslize</a>
             </div>
             <div class="links flexme ">
 
@@ -315,11 +319,11 @@
                 NEWSLETTER
             </div>           
             
-            <form action="" class="newsletter_form flexme">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email id">
-                <input type="tel" placeholder="Phone no.">
-                <input type="text" placeholder="Interests">
+            <form action="/" class="newsletter_form flexme" method="POST">
+                <input type="text" placeholder="Name" name="user_name" required autocomplete="off">
+                <input type="email" placeholder="Email id" name="user_email" required autocomplete="off">
+                <input type="tel" placeholder="Phone no." name="user_phone" required autocomplete="off">
+                <input type="text" placeholder="Interests" name="user_interest" required autocomplete="off">
                 <button type="submit" class="submit_btn point_on">Sign up</button>
             </form>
 

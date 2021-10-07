@@ -4,6 +4,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import ejs from "ejs";
 import _ from "lodash";
+import request from "request";
+import https from "https";
 
 // const express = require("express");
 // const bodyParser = require("body-parser");
@@ -15,12 +17,15 @@ import _ from "lodash";
 var fetched_data = []; 
 
 
-//Js render scripts
+//Js render scripts---------------------------------------------------------------------
 
 const app = express();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
+
+
+//Home Page
 
 app.get("/", (req, res)=>{
 
@@ -47,6 +52,8 @@ app.get("/", (req, res)=>{
     });
 })
 
+//News Page
+
 app.get("/:category_name", (req, res)=>{
     const category = req.params.category_name;
     let category_data = "error";
@@ -72,13 +79,60 @@ app.get("/:category_name", (req, res)=>{
 })
 
 
+//Post Page
+
+app.post("/", (req, res)=>{
+    let name = req.body.user_name;
+    let email = req.body.user_email;
+    let phone = req.body.user_phone;
+    let interest = req.body.user_interest;
+    
+    const data = {
+        members:[
+            {
+                email_address : email,
+                status : "subscribed",
+                merge_fields : {
+                    FNAME : name,
+                    PHONE : phone,
+                    INTEREST : interest
+                },
+                
+            }
+        ]
+    }
+    
+    const json_data = JSON.stringify(data);
+    
+    var url = "https://us5.api.mailchimp.com/3.0/lists/930cb7714e";
+
+    const options = {
+        method : "POST",
+        auth : "devik1:d10a86d64e3e00e3f973941d1159a1a4-us5"
+    }
+    
+    const request = https.request(url, options, (response)=>{
+        response.on("data", (data)=>{
+            console.log(JSON.parse(data));
+        })
+    })
+
+    request.write(json_data);
+    request.end();
+
+    res.redirect("/");
+    
+})
+
+// var PORT = 
+
 app.listen(4000, ()=>{
     console.log("listening");
 })
 
 
 
-//Fetching data
+//Fetching data-------------------------------------------------------------------------------------------------
 
 const urls = ["https://inshortsapi.vercel.app/news?category=all"];
 let link = "https://inshortsapi.vercel.app/news?category=";
@@ -123,3 +177,11 @@ for(var i=0; i<9; i++){
 // entertainment
 // science
 // automobile
+
+//Mailchimp
+
+//Audience id
+//d10a86d64e3e00e3f973941d1159a1a4-us5
+
+//audience key
+// 930cb7714e

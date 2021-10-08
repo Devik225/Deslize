@@ -126,7 +126,7 @@ app.post("/", (req, res)=>{
 
 // var PORT = 
 
-app.listen(4000, ()=>{
+app.listen(process.env.PORT, ()=>{
     console.log("listening");
 })
 

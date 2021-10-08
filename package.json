@@ -10,7 +10,8 @@
   "author": "Danny",
   "license": "MIT",
   "engines": {
-    "node":"16.9.1"
+    "node":"16.9.1",
+    "npm":"7.23.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

@@ -33,7 +33,13 @@
                     total_cards = carousel3.length;
                 }
                 // console.log(total_cards);
-                value=value-55;
+                
+                if(window.innerHeight > window.innerWidth){
+                    value=value-90
+                }
+                else{
+                    value=value-55;
+                }
                 console.log(value);
                 if((total_cards-1) * -55 >= value){
                     $(btn_right).css("opacity", "0.2");
@@ -47,7 +53,12 @@
 
             $(btn_left).on("click", function () {
 
-                value=value+55;
+                if(window.innerHeight > window.innerWidth){
+                    value=value+90
+                }
+                else{
+                    value=value+55;
+                }
                 if(value >= 0){
                     $(btn_left).css("opacity", "0.2");
                     value=0;

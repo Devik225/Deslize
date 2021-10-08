@@ -798,20 +798,22 @@ button {
   /* Universal page content styles */
 
   .content_page {
-    height: 150vw;
+    height: 155vw;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .heading {
     font-size: 10vw;
+    margin-left: 6vw;
   }
 
   .carousel {
     grid-template-columns: repeat(50, 1fr);
+    width: fit-content;
     position: absolute;
-    top: 26vw;
-    left: 12vw;
+    top: 22vw;
+    left: 10vw;
   }
 
   /* Multiple icons to switch in javascript */
@@ -822,25 +824,25 @@ button {
   .move_right1,
   .move_right2,
   .move_right3 {
-    width: 3vw;
-    height: 3vw;
+    width: 9vw;
+    height: 9vw;
     position: absolute;
     background-size: contain;
-    top: 22vw;
+    top: 140vw;
   }
 
   .move_left1,
   .move_left2,
   .move_left3 {
     background-image: url("css_img/left.svg");
-    left: 6vw;
+    left: 25vw;
   }
 
   .move_right1,
   .move_right2,
   .move_right3 {
     background-image: url("css_img/right.svg");
-    right: 6vw;
+    right: 25vw;
   }
 
   /* JS dependencies -------------------------------------------------- */
@@ -861,11 +863,11 @@ button {
   .card2,
   .card3 {
     color: white;
-    width: 72vw;
-    height: 100vw;
+    width: 78vw;
+    height: 110vw;
     background-color: #1d1d1d;
     border-radius: 0.6vw;
-    margin-right: 8vw;
+    margin-right: 10vw;
   }
 
   /* top part */
@@ -876,7 +878,7 @@ button {
 
   /* Top left */
   .thumbnail {
-    height: 32vw;
+    height: 36vw;
   }
 
   /* Top right */
@@ -913,17 +915,18 @@ button {
   .author {
     font-size: 3vw;
     font-weight: 300;
+    opacity: 0.8;
   }
 
   .author {
-    margin-left: 8.5vw;
+    margin-left: 26vw;
   }
 
   /* Middle break */
   .story {
     font-size: 3vw;
-    font-weight: 600;
-    margin-top: 2vw;
+    font-weight: 500;
+    margin-top: 4vw;
     padding-left: 2vw;
   }
 
@@ -931,8 +934,9 @@ button {
   .bottom {
     padding: 2vw;
     text-align: justify;
-    font-size: 2vw;
+    font-size: 2.5vw;
     font-weight: 300;
+    opacity: 0.8;
   }
 
   /* Main news card styles END --------------------------------------------------- */

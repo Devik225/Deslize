@@ -148,6 +148,10 @@ body {
   top: 15vw;
   left: 50vw;
   height: 28vw;
+  -webkit-border-radius: 0.4vw;
+  -moz-border-radius: 0.4vw;
+  -ms-border-radius: 0.4vw;
+  -o-border-radius: 0.4vw;
 }
 
 .upper {
@@ -197,6 +201,32 @@ body {
     -ms-transform: translateX(-630.6666%);
     -o-transform: translateX(-630.6666%);
   }
+}
+
+.upper::before {
+  content: "";
+  background: linear-gradient(
+    to right,
+    rgb(9, 13, 14, 0.6) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 100%;
+  position: absolute;
+  width: 30px;
+  z-index: 2;
+}
+
+.lower::before {
+  content: "";
+  background: linear-gradient(
+    to right,
+    rgb(9, 13, 14, 0.6) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 60%;
+  position: absolute;
+  width: 30px;
+  z-index: 2;
 }
 
 .home_crsl_img {

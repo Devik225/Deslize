@@ -1054,25 +1054,33 @@ button {
   /* News pages */
 
   .movedown {
-    top: 38vh;
+    top: 30vh;
   }
 
   .movedown_arrow {
-    top: 55vh;
+    top: 90vh;
   }
 
   .news_contain {
     height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background-image: url("css_img/background images_c/politics.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .news--head {
-    padding-top: 17vh;
-    font-size: 4.5vw;
+    margin-left: 5vw;
+    padding-top: 15vh;
+    font-size: 14vw;
     opacity: 0.35;
-    font-weight: 700;
+    font-weight: 600;
     color: white;
   }
 
@@ -1080,18 +1088,14 @@ button {
     display: flex;
     align-items: center;
     opacity: 0.7;
-    font-size: 1.5vw;
+    font-size: 4vw;
     transition: all 0.8s;
   }
 
   .back_icon {
-    font-size: 1.3vw !important;
+    font-size: 4vw !important;
     position: relative;
     top: 0.1vw;
     margin-right: 0.1vw;
-  }
-
-  .back:hover {
-    opacity: 0.9;
   }
 }

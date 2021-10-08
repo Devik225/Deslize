@@ -126,9 +126,7 @@ app.post("/", (req, res)=>{
 
 // var PORT = 
 
-app.listen(process.env.PORT, ()=>{
-    console.log("listening");
-})
+
 
 
 
@@ -161,6 +159,11 @@ for(var i=0; i<9; i++){
         console.log(err);
     })
 };
+
+
+app.listen(process.env.PORT, ()=>{
+    console.log("listening");
+})
 
 
 //API -------------------------------------------------------------------------------------------------------------------------

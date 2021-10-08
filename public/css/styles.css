@@ -154,9 +154,9 @@ body {
   position: relative;
   width: 100%;
   height: 40%;
-  overflow: scroll;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(1000, 15.8vw);
+  grid-template-columns: repeat(12, 15.8vw);
   /* transform: translateX(0); */
 }
 
@@ -164,9 +164,9 @@ body {
   margin-top: 0.8vw;
   width: 100%;
   height: 56%;
-  overflow: scroll;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(1000, 20.8vw);
+  grid-template-columns: repeat(12, 20.8vw);
 }
 
 .home_card {
@@ -179,23 +179,23 @@ body {
 
 .c1 {
   width: 15vw;
-  animation: moveSlideshow 400s linear infinite;
-  -webkit-animation: moveSlideshow 400s linear infinite;
+  animation: moveSlideshow 14s linear infinite;
+  -webkit-animation: moveSlideshow 14s linear infinite;
 }
 
 .c2 {
   width: 20vw;
-  animation: moveSlideshow 800s linear infinite;
-  -webkit-animation: moveSlideshow 800s linear infinite;
+  animation: moveSlideshow 22s linear infinite;
+  -webkit-animation: moveSlideshow 22s linear infinite;
 }
 
 @keyframes moveSlideshow {
   100% {
-    transform: translateX(-10000.6666%);
-    -webkit-transform: translateX(-10000.6666%);
-    -moz-transform: translateX(-10000.6666%);
-    -ms-transform: translateX(-10000.6666%);
-    -o-transform: translateX(-10000.6666%);
+    transform: translateX(-630.6666%);
+    -webkit-transform: translateX(-630.6666%);
+    -moz-transform: translateX(-630.6666%);
+    -ms-transform: translateX(-630.6666%);
+    -o-transform: translateX(-630.6666%);
   }
 }
 

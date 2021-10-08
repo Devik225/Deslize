@@ -175,7 +175,7 @@ body {
 
 .home_card {
   height: 100%;
-  background-color: cadetblue;
+  background-color: rgb(47, 48, 48);
   margin-right: 0.8vw;
   transition: all 3s;
   overflow: hidden;

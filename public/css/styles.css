@@ -798,7 +798,7 @@ button {
   /* Universal page content styles */
 
   .content_page {
-    height: 155vw;
+    height: 162vw;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -826,7 +826,7 @@ button {
   .move_right3 {
     width: 9vw;
     height: 9vw;
-    top: 140vw;
+    top: 145vw;
   }
 
   .move_left1,
@@ -861,7 +861,7 @@ button {
     color: white;
     background-color: #1d1d1d;
     width: 78vw;
-    height: 110vw;
+    height: 116vw;
     border-radius: 0.6vw;
     margin-right: 10vw;
   }
@@ -919,9 +919,9 @@ button {
 
   /* Middle break */
   .story {
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-weight: 500;
-    margin-top: 4vw;
+    margin-top: 3.5vw;
     padding-left: 2vw;
   }
 
@@ -929,7 +929,7 @@ button {
   .bottom {
     padding: 2vw;
     text-align: justify;
-    font-size: 2.5vw;
+    font-size: 3vw;
     font-weight: 300;
     opacity: 0.8;
   }
@@ -1054,11 +1054,11 @@ button {
   /* News pages */
 
   .movedown {
-    top: 30vh;
+    top: 30%;
   }
 
   .movedown_arrow {
-    top: 90vh;
+    top: 90%;
   }
 
   .news_contain {

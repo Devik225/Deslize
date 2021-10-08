@@ -683,23 +683,507 @@ button {
   opacity: 0.9;
 }
 
-.mob {
-  display: none;
-}
-
-/* Mobile */
+/* Mobile--------------------------------------------------------------------------------------------------------------------------- */
 
 @media (orientation: portrait) {
-  .mob {
-    display: block;
-    overflow: hidden;
-    position: fixed;
-    z-index: 15;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  .contain_me {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  /* Home---------------------------------------------------------------------------------------- */
+
+  .strip {
+    font-size: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+  }
+
+  .home_contain {
+    height: 180vw;
+    background-size: cover;
+  }
+
+  /* Navbar */
+
+  .nav {
+    left: 4vw;
+    top: 13vw;
+  }
+
+  .logo {
+    font-size: 6vw;
+  }
+
+  .logo img {
+    margin-right: 2vw;
+    width: 5vw;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  /* Home page content */
+
+  .landing_text {
+    margin-top: 40vw;
+  }
+
+  .small_title {
+    font-size: 6vw;
+  }
+
+  .large_title {
+    margin-top: -2vw;
+    font-size: 10vw;
+  }
+
+  .content_title {
+    font-size: 4vw;
+    width: 86vw;
+  }
+
+  .landing_images {
     right: 0;
+    left: 0;
+    top: 115vw;
+    height: 52vw;
+  }
+
+  .upper {
+    grid-template-columns: repeat(15, 33.7vw);
+  }
+
+  .lower {
+    margin-top: 1.7vw;
+    grid-template-columns: repeat(15, 43.7vw);
+  }
+
+  .c1 {
+    width: 32vw;
+  }
+
+  .c2 {
+    width: 42vw;
+  }
+
+  .upper::before {
+    content: "";
+    content: "";
+    display: none;
+  }
+
+  .lower::before {
+    content: "";
+    display: none;
+  }
+
+  /* Mouse scroll animation */
+
+  .mouse {
+    display: none;
+  }
+
+  /* Page Break */
+
+  .page_break {
+    border-bottom: 0.75vw dashed white;
+  }
+
+  /* Universal page content styles */
+
+  .content_page {
+    height: 150vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .heading {
+    font-size: 10vw;
+  }
+
+  .carousel {
+    grid-template-columns: repeat(50, 1fr);
+    position: absolute;
+    top: 26vw;
+    left: 12vw;
+  }
+
+  /* Multiple icons to switch in javascript */
+
+  .move_left1,
+  .move_left2,
+  .move_left3,
+  .move_right1,
+  .move_right2,
+  .move_right3 {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    background-size: contain;
+    top: 22vw;
+  }
+
+  .move_left1,
+  .move_left2,
+  .move_left3 {
+    background-image: url("css_img/left.svg");
+    left: 6vw;
+  }
+
+  .move_right1,
+  .move_right2,
+  .move_right3 {
+    background-image: url("css_img/right.svg");
+    right: 6vw;
+  }
+
+  /* JS dependencies -------------------------------------------------- */
+
+  /* .move_forward {
+    
+  }
+  
+  .move_backward {
+    transform: translateX(50vw);
+  } */
+
+  /* JS dependencies END -------------------------------------------------- */
+
+  /* Main news card styles --------------------------------------------------- */
+
+  .card1,
+  .card2,
+  .card3 {
+    color: white;
+    width: 72vw;
+    height: 100vw;
+    background-color: #1d1d1d;
+    border-radius: 0.6vw;
+    margin-right: 8vw;
+  }
+
+  /* top part */
+  .top {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* Top left */
+  .thumbnail {
+    height: 32vw;
+  }
+
+  /* Top right */
+  .title_info {
+    margin-top: 5vw;
+    height: 24vw;
+    padding: 2vw;
+    position: relative;
+  }
+
+  .dot {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .card_time {
+    font-size: 4.5vw;
+    font-weight: 400;
+  }
+
+  .card_title {
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: #ffffff;
+  }
+
+  .card_info {
+    position: absolute;
+    bottom: 0;
+    /* top: 1.6vw; */
+  }
+
+  .day,
+  .author {
+    font-size: 3vw;
+    font-weight: 300;
+  }
+
+  .author {
+    margin-left: 8.5vw;
+  }
+
+  /* Middle break */
+  .story {
+    font-size: 3vw;
+    font-weight: 600;
+    margin-top: 2vw;
+    padding-left: 2vw;
+  }
+
+  /* Bottom part */
+  .bottom {
+    padding: 2vw;
+    text-align: justify;
     font-size: 2vw;
-    background-color: white;
+    font-weight: 300;
+  }
+
+  /* Main news card styles END --------------------------------------------------- */
+
+  /* Styles specific to each section */
+
+  /* Page 2 */
+
+  .img_page2 {
+    background-image: url("css_img/background images_c/latest.jpg");
+  }
+
+  /* Page 3 */
+
+  .img_page3 {
+    background-image: url("css_img/background images_c/politics.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Page 4 */
+
+  .img_page4 {
+    background-image: url("css_img/background images_c/business.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Page 5 */
+
+  .categories_page {
+    background-image: url("css_img/background images_c/categories_new.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 66vw;
+  }
+
+  .all_category {
+    position: absolute;
+    top: 10vw;
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+  }
+
+  .category {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vw;
+    width: 27vw;
+    margin-right: 2vw;
+    margin-bottom: 3vw;
+    background-color: aliceblue;
+    border-radius: 0.3vw;
+    transition: all 1s;
+  }
+
+  .category:hover {
+    filter: brightness(1.4);
+    -webkit-filter: brightness(1.4);
+  }
+
+  .card_heading {
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 1.45vw;
+    margin-left: 1.3vw;
+    margin-top: 1.2vw;
+  }
+
+  .latest_card {
+    background-image: url("css_img/cards/latest.jpg");
+  }
+
+  .politics_card {
+    background-image: url("css_img/cards/politics.jpg");
+  }
+
+  .business_card {
+    background-image: url("css_img/cards/business.jpg");
+  }
+
+  .sports_card {
+    background-image: url("css_img/cards/sports.jpg");
+  }
+
+  .science_card {
+    background-image: url("css_img/cards/science.jpg");
+  }
+
+  .tech_card {
+    background-image: url("css_img/cards/tech.jpg");
+  }
+
+  .startup_card {
+    background-image: url("css_img/cards/startup.jpg");
+  }
+
+  .entertainment_card {
+    background-image: url("css_img/cards/entertainment.jpg");
+  }
+
+  .auto_card {
+    background-image: url("css_img/cards/auto.jpg");
+  }
+
+  /* Page 6 */
+
+  .newsletter_page {
+    background-size: contain;
+    position: relative;
+    height: 44vw;
+  }
+
+  .img_newsletter {
+    background-image: url("css_img/background images_c/newsletter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .news_head {
+    color: white;
+    text-align: center;
+    padding-top: 2.8vw;
+    font-size: 3.3vw;
+    font-weight: 600;
+    margin-bottom: 4vw;
+  }
+
+  .newsletter_form {
+    margin-top: 3vw;
+    height: 23vw;
+    flex-direction: column;
+    background-color: #b4b4b495;
+    margin: auto;
+    width: fit-content;
+    padding: 0.8vw;
+    border-radius: 0.3vw;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(32, 32, 32);
+    font-size: 1.2vw;
+    font-weight: 300;
+    opacity: 0.6; /* Firefox */
+  }
+
+  input {
+    font-size: 1.3vw;
+    margin-top: 2.5vw;
+    width: 25vw;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: #000411;
+    border-bottom: 0.155vw solid #312f2f;
+  }
+
+  button {
+    margin-top: 2.2vw;
+    font-size: 1.2vw;
+    width: 26vw;
+    background-color: #000411;
+    color: white;
+    border: none;
+    border-radius: 0.3vw;
+    padding-top: 1.1vw;
+    padding-bottom: 1.1vw;
+  }
+
+  /* Footer */
+
+  .footer {
+    position: relative;
+    height: 5vw;
+    background-color: #00030c;
+  }
+
+  .social_media {
+    position: relative;
+    top: 0.4vw;
+    align-items: center;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+
+  .s_icon {
+    opacity: 0.7;
+    margin-left: 1.5vw;
+    transition: opacity 0.5s ease;
+    font-size: 2vw !important;
+  }
+
+  .s_icon:hover {
+    opacity: 0.9;
+  }
+
+  .my_name {
+    font-size: 0.6vw;
+    color: white;
+    position: absolute;
+    right: 0.6vw;
+    bottom: 0.6vw;
+  }
+
+  /* News pages */
+
+  .movedown {
+    top: 38vh;
+  }
+
+  .movedown_arrow {
+    top: 55vh;
+  }
+
+  .news_contain {
+    height: 100vh;
+    background-image: url("css_img/background images_c/politics.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .news--head {
+    padding-top: 17vh;
+    font-size: 4.5vw;
+    opacity: 0.35;
+    font-weight: 700;
+    color: white;
+  }
+
+  .back {
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    font-size: 1.5vw;
+    transition: all 0.8s;
+  }
+
+  .back_icon {
+    font-size: 1.3vw !important;
+    position: relative;
+    top: 0.1vw;
+    margin-right: 0.1vw;
+  }
+
+  .back:hover {
+    opacity: 0.9;
   }
 }

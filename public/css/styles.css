@@ -749,6 +749,7 @@ button {
   }
 
   .landing_images {
+    display: none;
     right: 0;
     left: 0;
     top: 115vw;

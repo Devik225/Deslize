@@ -34,16 +34,18 @@
                 }
                 // console.log(total_cards);
                 
+                var ini=-55;
                 if(window.innerHeight > window.innerWidth){
-                    value=value-90
+                    value=value-90;
+                    ini = -90;
                 }
                 else{
                     value=value-55;
                 }
                 console.log(value);
-                if((total_cards-1) * -55 >= value){
+                if((total_cards-1) * ini >= value){
                     $(btn_right).css("opacity", "0.2");
-                    value = (total_cards-1) * -55;
+                    value = (total_cards-1) * ini;
                 }
 
                 $(btn_left).css("opacity", "1");

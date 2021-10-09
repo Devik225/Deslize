@@ -113,7 +113,7 @@ app.post("/", (req, res)=>{
     
     const request = https.request(url, options, (response)=>{
         response.on("data", (data)=>{
-            console.log(JSON.parse(data));
+            // console.log(JSON.parse(data));
         })
     })
 
@@ -161,7 +161,7 @@ for(var i=0; i<9; i++){
 };
 
 
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 4000, ()=>{
     console.log("listening");
 })
 

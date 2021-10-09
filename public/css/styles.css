@@ -798,7 +798,7 @@ button {
   /* Universal page content styles */
 
   .content_page {
-    height: 162vw;
+    height: 170vw;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -806,39 +806,44 @@ button {
   }
 
   .heading {
+    top: 6vw;
     font-size: 11vw;
     margin-left: 6vw;
   }
 
   .carousel {
     width: fit-content;
-    top: 22vw;
+    top: 28vw;
     left: 10vw;
   }
 
   /* Multiple icons to switch in javascript */
 
   .move_left1,
-  .move_left2,
-  .move_left3,
-  .move_right1,
-  .move_right2,
-  .move_right3 {
+  .move_right1 {
     width: 9vw;
     height: 9vw;
-    top: 145vw;
+    top: 155vw;
   }
 
-  .move_left1,
-  .move_left2,
-  .move_left3 {
-    left: 25vw;
+  .move_left1 {
+    left: 15vw;
   }
 
-  .move_right1,
-  .move_right2,
-  .move_right3 {
-    right: 25vw;
+  .move_right1 {
+    right: 15vw;
+  }
+
+  .move_right1::before {
+    content: "";
+    width: 12vw;
+    border-radius: 25px;
+    height: 1.5vw;
+    background-color: white;
+    position: absolute;
+    z-index: 20;
+    right: 29vw;
+    top: 3vw;
   }
 
   /* JS dependencies -------------------------------------------------- */
@@ -855,13 +860,11 @@ button {
 
   /* Main news card styles --------------------------------------------------- */
 
-  .card1,
-  .card2,
-  .card3 {
+  .card1 {
     color: white;
     background-color: #1d1d1d;
     width: 78vw;
-    height: 116vw;
+    height: 120vw;
     border-radius: 0.6vw;
     margin-right: 10vw;
   }
@@ -951,7 +954,7 @@ button {
 
   .all_category {
     margin-left: 4vw;
-    top: 25vw;
+    top: 28vw;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2vw;
   }
@@ -985,12 +988,16 @@ button {
     margin-bottom: 10vw;
   }
 
+  input {
+    border-bottom: 0.5vw solid #312f2f;
+  }
+
   ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgb(32, 32, 32);
+    color: rgb(24, 24, 24);
     font-size: 4vw;
     font-weight: 300;
-    opacity: 0.6; /* Firefox */
+    opacity: 0.7; /* Firefox */
   }
 
   .newsletter_form {
@@ -1003,16 +1010,16 @@ button {
     font-size: 4vw;
     margin-top: 6vw;
     margin-bottom: 2vw;
-    width: 78vw;
+    width: 70vw;
   }
 
   button {
     margin-top: 6vw;
     font-size: 3vw;
-    width: 80vw;
+    width: 72vw;
     border-radius: 1vw;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
   }
 
   /* Footer */
@@ -1054,11 +1061,11 @@ button {
   /* News pages */
 
   .movedown {
-    top: 30%;
+    top: 25%;
   }
 
   .movedown_arrow {
-    top: 90%;
+    top: 85%;
   }
 
   .news_contain {
@@ -1070,32 +1077,36 @@ button {
     bottom: 0;
     right: 0;
     left: 0;
-    background-image: url("css_img/background images_c/politics.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .news--head {
     margin-left: 5vw;
-    padding-top: 15vh;
+    padding-top: 13vh;
     font-size: 14vw;
-    opacity: 0.35;
     font-weight: 600;
-    color: white;
   }
 
   .back {
-    display: flex;
-    align-items: center;
     opacity: 0.7;
     font-size: 4vw;
-    transition: all 0.8s;
   }
 
   .back_icon {
     font-size: 4vw !important;
-    position: relative;
     top: 0.1vw;
     margin-right: 0.1vw;
+  }
+
+  /* Removals */
+  .pg3 {
+    display: none;
+  }
+
+  .pg4 {
+    display: none;
+  }
+
+  .break_ {
+    display: none;
   }
 }

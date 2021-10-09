@@ -7,10 +7,11 @@
         //---------------------------------------------------------------
         const carousel1 = $(".card1");
         const carousel2 = $(".card2");
-        const carousel3 = $(".card3");        
+        const carousel3 = $(".card3");    
+        const carousel4 = $(".card4");     
 
 
-        for(let i=1; i<=3; i++){
+        for(let i=1; i<=4; i++){
 
             const btn_right = ".move_right" + i;
             const btn_left = ".move_left" + i;
@@ -31,6 +32,9 @@
                 }
                 else if(i == 3){
                     total_cards = carousel3.length;
+                }
+                else if(i == 4){
+                    total_cards = carousel4.length;
                 }
                 // console.log(total_cards);
                 

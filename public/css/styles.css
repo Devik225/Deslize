@@ -300,9 +300,11 @@ body {
 .move_left1,
 .move_left2,
 .move_left3,
+.move_left4,
 .move_right1,
 .move_right2,
-.move_right3 {
+.move_right3,
+.move_right4 {
   width: 3vw;
   height: 3vw;
   position: absolute;
@@ -312,14 +314,16 @@ body {
 
 .move_left1,
 .move_left2,
-.move_left3 {
+.move_left3,
+.move_left4 {
   background-image: url("css_img/left.svg");
   left: 6vw;
 }
 
 .move_right1,
 .move_right2,
-.move_right3 {
+.move_right3,
+.move_right4 {
   background-image: url("css_img/right.svg");
   right: 6vw;
 }
@@ -340,7 +344,8 @@ body {
 
 .card1,
 .card2,
-.card3 {
+.card3,
+.card4 {
   padding: 1vw;
   width: 50vw;
   height: 22vw;
@@ -845,9 +850,11 @@ button {
   .move_left1,
   .move_left2,
   .move_left3,
+  .move_left4,
   .move_right1,
   .move_right2,
-  .move_right3 {
+  .move_right3,
+  .move_right4 {
     width: 9vw;
     height: 9vw;
     top: 175vw;
@@ -856,19 +863,22 @@ button {
 
   .move_left1,
   .move_left2,
-  .move_left3 {
+  .move_left3,
+  .move_left4 {
     left: 15vw;
   }
 
   .move_right1,
   .move_right2,
-  .move_right3 {
+  .move_right3,
+  .move_right4 {
     right: 15vw;
   }
 
   .move_right1::before,
   .move_right2::before,
-  .move_right3::before {
+  .move_right3::before,
+  .move_right4::before {
     content: "";
     width: 12vw;
     border-radius: 25px;
@@ -896,7 +906,8 @@ button {
 
   .card1,
   .card2,
-  .card3 {
+  .card3,
+  .card4 {
     color: white;
     background-color: #1d1d1d;
     width: 78vw;
@@ -934,6 +945,7 @@ button {
   }
 
   .card_title {
+    line-height: 6vw;
     font-size: 4vw;
     font-weight: 400;
     color: #ffffff;
@@ -941,8 +953,9 @@ button {
 
   .card_info {
     position: absolute;
-    bottom: 1vw;
+    bottom: 0.5vw;
     display: flex;
+
     /* top: 1.6vw; */
   }
 
@@ -976,10 +989,12 @@ button {
   /* Bottom part */
   .bottom {
     padding: 2vw;
+    height: 40vw;
     text-align: justify;
     font-size: 3.5vw;
     font-weight: 300;
     opacity: 0.8;
+    overflow: scroll;
   }
 
   /* Main news card styles END --------------------------------------------------- */
@@ -1110,7 +1125,7 @@ button {
   }
 
   .movedown_arrow {
-    top: 87%;
+    top: 84%;
   }
 
   .news_nav {
@@ -1118,6 +1133,7 @@ button {
   }
 
   .news_contain {
+    position: fixed;
     height: 100vh;
     overflow: hidden;
     position: absolute;
@@ -1146,9 +1162,45 @@ button {
     margin-right: 0.1vw;
   }
 
+  .card4 {
+    color: white;
+    background-color: #1d1d1d;
+    width: 78vw;
+    height: 132vw;
+    border-radius: 0.6vw;
+    margin-right: 10vw;
+  }
+
   /* Removals */
 
   .strip1 {
+    display: none;
+  }
+}
+
+@media (max-height: 740px) {
+  .news--head {
+    padding-top: 12vh;
+  }
+
+  .movedown {
+    top: 20%;
+  }
+
+  .movedown_arrow {
+    top: 55%;
+  }
+
+  .move_left4 {
+    left: 1.5vw;
+  }
+
+  .move_right4 {
+    right: 1.5vw;
+  }
+
+  .move_right4::before {
+    content: "";
     display: none;
   }
 }

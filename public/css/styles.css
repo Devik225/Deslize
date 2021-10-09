@@ -851,6 +851,7 @@ button {
     width: 9vw;
     height: 9vw;
     top: 175vw;
+    z-index: 30;
   }
 
   .move_left1,
@@ -1105,7 +1106,7 @@ button {
   /* News pages */
 
   .movedown {
-    top: 17%;
+    top: 15.5%;
   }
 
   .movedown_arrow {

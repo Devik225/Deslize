@@ -749,11 +749,10 @@ button {
   }
 
   .landing_images {
-    display: none;
     right: 0;
     left: 0;
-    top: 115vw;
-    height: 52vw;
+    top: 108vw;
+    height: 65vw;
   }
 
   .upper {
@@ -767,10 +766,24 @@ button {
 
   .c1 {
     width: 32vw;
+    transform: translateX(-10vw);
+    animation: none;
+    -webkit-animation: none;
+    -webkit-transform: translateX(-10vw);
+    -moz-transform: translateX(-10vw);
+    -ms-transform: translateX(-10vw);
+    -o-transform: translateX(-10vw);
   }
 
   .c2 {
     width: 42vw;
+    transform: translateX(-50vw);
+    animation: none;
+    -webkit-animation: none;
+    -webkit-transform: translateX(-50vw);
+    -moz-transform: translateX(-50vw);
+    -ms-transform: translateX(-50vw);
+    -o-transform: translateX(-50vw);
   }
 
   .upper::before {
@@ -799,7 +812,7 @@ button {
   /* Universal page content styles */
 
   .content_page {
-    height: 170vw;
+    height: 192vw;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -821,21 +834,31 @@ button {
   /* Multiple icons to switch in javascript */
 
   .move_left1,
-  .move_right1 {
+  .move_left2,
+  .move_left3,
+  .move_right1,
+  .move_right2,
+  .move_right3 {
     width: 9vw;
     height: 9vw;
-    top: 155vw;
+    top: 175vw;
   }
 
-  .move_left1 {
+  .move_left1,
+  .move_left2,
+  .move_left3 {
     left: 15vw;
   }
 
-  .move_right1 {
+  .move_right1,
+  .move_right2,
+  .move_right3 {
     right: 15vw;
   }
 
-  .move_right1::before {
+  .move_right1::before,
+  .move_right2::before,
+  .move_right3::before {
     content: "";
     width: 12vw;
     border-radius: 25px;
@@ -861,11 +884,13 @@ button {
 
   /* Main news card styles --------------------------------------------------- */
 
-  .card1 {
+  .card1,
+  .card2,
+  .card3 {
     color: white;
     background-color: #1d1d1d;
     width: 78vw;
-    height: 120vw;
+    height: 140vw;
     border-radius: 0.6vw;
     margin-right: 10vw;
   }
@@ -878,13 +903,13 @@ button {
 
   /* Top left */
   .thumbnail {
-    height: 36vw;
+    height: 40vw;
   }
 
   /* Top right */
   .title_info {
-    margin-top: 5vw;
-    height: 24vw;
+    margin-top: 3vw;
+    height: 26vw;
     padding: 2vw;
   }
 
@@ -894,12 +919,12 @@ button {
   }
 
   .card_time {
-    font-size: 4.5vw;
+    font-size: 5vw;
     font-weight: 400;
   }
 
   .card_title {
-    font-size: 3.5vw;
+    font-size: 4vw;
     font-weight: 400;
     color: #ffffff;
   }
@@ -918,12 +943,12 @@ button {
   }
 
   .author {
-    margin-left: 26vw;
+    margin-left: 32vw;
   }
 
   /* Middle break */
   .story {
-    font-size: 3.5vw;
+    font-size: 4vw;
     font-weight: 500;
     margin-top: 3.5vw;
     padding-left: 2vw;
@@ -933,7 +958,7 @@ button {
   .bottom {
     padding: 2vw;
     text-align: justify;
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-weight: 300;
     opacity: 0.8;
   }
@@ -998,7 +1023,7 @@ button {
     color: rgb(24, 24, 24);
     font-size: 4vw;
     font-weight: 300;
-    opacity: 0.7; /* Firefox */
+    opacity: 0.75; /* Firefox */
   }
 
   .newsletter_form {
@@ -1062,11 +1087,11 @@ button {
   /* News pages */
 
   .movedown {
-    top: 25%;
+    top: 22%;
   }
 
   .movedown_arrow {
-    top: 85%;
+    top: 91%;
   }
 
   .news_contain {
@@ -1082,8 +1107,8 @@ button {
 
   .news--head {
     margin-left: 5vw;
-    padding-top: 13vh;
-    font-size: 14vw;
+    padding-top: 12vh;
+    font-size: 12vw;
     font-weight: 600;
   }
 
@@ -1099,15 +1124,4 @@ button {
   }
 
   /* Removals */
-  .pg3 {
-    display: none;
-  }
-
-  .pg4 {
-    display: none;
-  }
-
-  .break_ {
-    display: none;
-  }
 }

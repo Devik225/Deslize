@@ -404,18 +404,27 @@ body {
 
 .card_info {
   position: absolute;
-  bottom: 0;
+  bottom: 1vw;
   /* top: 1.6vw; */
 }
 
-.day,
-.author {
+.day {
+  position: absolute;
+  width: 30vw;
+  left: 0vw;
   font-size: 1vw;
   font-weight: 500;
+  opacity: 0.8;
 }
 
 .author {
-  margin-left: 8.5vw;
+  position: absolute;
+  width: 30vw;
+  right: -25vw;
+  text-align: right;
+  font-size: 1vw;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 /* Middle break */
@@ -931,19 +940,28 @@ button {
 
   .card_info {
     position: absolute;
-    bottom: 0;
+    bottom: 1vw;
+    display: flex;
     /* top: 1.6vw; */
   }
 
-  .day,
-  .author {
+  .day {
+    position: absolute;
+    width: 30vw;
+    left: 0;
     font-size: 3vw;
     font-weight: 300;
     opacity: 0.8;
   }
 
   .author {
-    margin-left: 26vw;
+    position: absolute;
+    width: 30vw;
+    right: 16vw;
+    text-align: right;
+    font-size: 3vw;
+    font-weight: 300;
+    opacity: 0.8;
   }
 
   /* Middle break */
@@ -1128,4 +1146,8 @@ button {
   }
 
   /* Removals */
+
+  .strip1 {
+    display: none;
+  }
 }

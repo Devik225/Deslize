@@ -86,6 +86,8 @@ app.post("/", (req, res)=>{
     let email = req.body.user_email;
     let phone = req.body.user_phone;
     let interest = req.body.user_interest;
+
+    console.log(name);
     
     const data = {
         members:[
@@ -112,8 +114,9 @@ app.post("/", (req, res)=>{
     }
     
     const request = https.request(url, options, (response)=>{
+
         response.on("data", (data)=>{
-            // console.log(JSON.parse(data));
+            console.log(JSON.parse(data));
         })
     })
 
@@ -161,7 +164,7 @@ for(var i=0; i<9; i++){
 };
 
 
-app.listen(process.env.PORT || 4000, ()=>{
+app.listen(process.env.PORT || 4040, ()=>{
     console.log("listening");
 })
 
@@ -182,6 +185,8 @@ app.listen(process.env.PORT || 4000, ()=>{
 // automobile
 
 //Mailchimp
+
+// fcaebe6af64bb7ab081de4043c7dc249-us5
 
 //Audience id
 //d10a86d64e3e00e3f973941d1159a1a4-us5

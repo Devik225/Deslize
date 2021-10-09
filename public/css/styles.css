@@ -1123,6 +1123,10 @@ button {
 
   /* News pages */
 
+  .hide {
+    display: none;
+  }
+
   .movedown {
     top: 17.5%;
   }

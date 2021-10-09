@@ -1124,11 +1124,11 @@ button {
   /* News pages */
 
   .movedown {
-    top: 15.5%;
+    top: 17.5%;
   }
 
   .movedown_arrow {
-    top: 84%;
+    top: 85%;
   }
 
   .news_nav {
@@ -1149,7 +1149,7 @@ button {
 
   .news--head {
     margin-left: 5vw;
-    padding-top: 8.5vh;
+    padding-top: 9.5vh;
     font-size: 8vw;
     font-weight: 500;
   }

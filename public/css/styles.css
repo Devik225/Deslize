@@ -989,12 +989,15 @@ button {
   /* Bottom part */
   .bottom {
     padding: 2vw;
-    height: 40vw;
     text-align: justify;
     font-size: 3.5vw;
     font-weight: 300;
     opacity: 0.8;
+  }
+
+  .overflow_cnt {
     overflow: scroll;
+    height: 40vw;
   }
 
   /* Main news card styles END --------------------------------------------------- */
@@ -1192,11 +1195,11 @@ button {
   }
 
   .move_left4 {
-    left: 1.5vw;
+    left: 1vw;
   }
 
   .move_right4 {
-    right: 1.5vw;
+    right: 1vw;
   }
 
   .move_right4::before {

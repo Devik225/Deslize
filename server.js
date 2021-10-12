@@ -53,12 +53,19 @@ app.get("/", (req, res)=>{
     if(data_latest === "empty" || data_politics === "empty" || data_business === "empty"){
         res.render("error", {});
     }
+    else{
+        data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time < b.time) ? 1 : -1) : -1);
+        data_politics.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time < b.time) ? 1 : -1) : -1);
+        data_business.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time < b.time) ? 1 : -1) : -1);
 
-    res.render("Home", {
-        ejs_latest_data : data_latest,
-        ejs_politics_data : data_politics,
-        ejs_business_data : data_business
-    });
+        res.render("Home", {
+            ejs_latest_data : data_latest,
+            ejs_politics_data : data_politics,
+            ejs_business_data : data_business
+        });
+    }
+
+    
 
     
 })
@@ -82,6 +89,10 @@ app.get("/:category_name", (req, res)=>{
         res.render("error", {});
     }
     else{
+
+        //sorting data
+        category_data.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time < b.time) ? 1 : -1) : -1)
+
         res.render("news", {
             ejs_section_name : _.startCase(_.toLower(category)),
             ejs_data : category_data

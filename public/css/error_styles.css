@@ -45,3 +45,18 @@ body {
   height: 5vw;
   background-color: #202020;
 }
+
+@media (orientation: portrait) {
+  .cat {
+    flex-direction: column;
+    margin-top: 60%;
+  }
+
+  .cat_img {
+    width: 40vw;
+  }
+
+  .oops {
+    font-size: 5.5vw;
+  }
+}

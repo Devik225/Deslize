@@ -1010,11 +1010,6 @@ button {
     height: 220vw;
   }
 
-  .cat_head {
-    opacity: 0.6;
-    margin-left: 16vw;
-  }
-
   .all_category {
     margin-left: 4vw;
     top: 28vw;
@@ -1176,6 +1171,13 @@ button {
     height: 132vw;
     border-radius: 0.6vw;
     margin-right: 10vw;
+  }
+
+  /* Error page */
+
+  .cat_head {
+    opacity: 0.6;
+    margin-left: 16vw;
   }
 
   /* Removals */

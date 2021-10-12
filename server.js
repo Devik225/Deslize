@@ -27,15 +27,19 @@ app.use(express.static("public"));
 
 //Home Page
 
-app.get("/", (req, res)=>{
+collect_data();
 
-    let data_latest;
-    let data_politics;
-    let data_business;
+app.get("/", (req, res)=>{
+    collect_data();   
+
+    let data_latest = "empty";
+    let data_politics = "empty";
+    let data_business = "empty";
 
     fetched_data.forEach((data)=>{
         if(data.category === "all"){
             data_latest = data;
+            // data_latest.data.time.sort();
         }
         else if(data.category === "politics"){
             data_politics = data;
@@ -45,16 +49,24 @@ app.get("/", (req, res)=>{
         }
     });
 
+
+    if(data_latest === "empty" || data_politics === "empty" || data_business === "empty"){
+        res.render("error", {});
+    }
+
     res.render("Home", {
         ejs_latest_data : data_latest,
         ejs_politics_data : data_politics,
         ejs_business_data : data_business
     });
+
+    
 })
 
 //News Page
 
 app.get("/:category_name", (req, res)=>{
+    collect_data();
     const category = req.params.category_name;
     let category_data = "error";
 
@@ -135,38 +147,44 @@ app.post("/", (req, res)=>{
 
 //Fetching data-------------------------------------------------------------------------------------------------
 
-const urls = ["https://inshortsapi.vercel.app/news?category=all"];
-let link = "https://inshortsapi.vercel.app/news?category=";
 
-urls.push(link + "politics");
-urls.push(link + "business");
-urls.push(link + "sports");
-urls.push(link + "science");
-urls.push(link + "technology");
-urls.push(link + "startup");
-urls.push(link + "entertainment");
-urls.push(link + "automobile");
+function collect_data(){
+
+    const urls = ["https://inshortsapi.vercel.app/news?category=all"];
+    let link = "https://inshortsapi.vercel.app/news?category=";
+
+    urls.push(link + "politics");
+    urls.push(link + "business");
+    urls.push(link + "sports");
+    urls.push(link + "science");
+    urls.push(link + "technology");
+    urls.push(link + "startup");
+    urls.push(link + "entertainment");
+    urls.push(link + "automobile");
 
 
-for(var i=0; i<9; i++){
-    fetch(urls[i])
-    .then((res)=>{
-        return res.json();
-    })
-    .then((data)=>{
+    for(var i=0; i<9; i++){
+        fetch(urls[i])
+        .then((res)=>{
+            return res.json();
+        })
+        .then((data)=>{
 
-        fetched_data.push(data)
-        // console.log(fetched_data);
-    })
-    .catch((err)=>{
-        console.log(err);
-    })
-};
+            fetched_data.push(data)
+            // console.log(fetched_data);
+        })
+        .catch((err)=>{
+            res.redirect("error", {});
+        })
+    };
+
+}
 
 
 app.listen(process.env.PORT || 4040, ()=>{
     console.log("listening");
 })
+
 
 
 //API -------------------------------------------------------------------------------------------------------------------------

@@ -14,7 +14,13 @@ import https from "https";
 
 //All api data
 
-var fetched_data = []; 
+var fetched_data = [];
+const m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]; 
+
+const month = new Map();
+for(var i=0; i<12; i++){
+    month.set(m[i], i);
+};
 
 
 //Js render scripts---------------------------------------------------------------------
@@ -54,9 +60,21 @@ app.get("/", (req, res)=>{
         res.render("error", {});
     }
     else{
-        data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time < b.time) ? 1 : -1) : -1);
-        data_politics.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time < b.time) ? 1 : -1) : -1);
-        data_business.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time < b.time) ? 1 : -1) : -1);
+        data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
+        data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
+        data_latest.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
+        
+
+        data_politics.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
+        data_politics.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
+        data_politics.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
+
+
+        data_business.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
+        data_business.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
+        data_business.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
+
+
 
         res.render("Home", {
             ejs_latest_data : data_latest,
@@ -91,7 +109,9 @@ app.get("/:category_name", (req, res)=>{
     else{
 
         //sorting data
-        category_data.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time < b.time) ? 1 : -1) : -1)
+        category_data.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
+        category_data.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
+        category_data.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
 
         res.render("news", {
             ejs_section_name : _.startCase(_.toLower(category)),

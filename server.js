@@ -76,11 +76,14 @@ app.get("/", (req, res)=>{
 
 
 
-        res.render("Home", {
-            ejs_latest_data : data_latest,
-            ejs_politics_data : data_politics,
-            ejs_business_data : data_business
-        });
+        setTimeout(() => {
+            res.render("Home", {
+                ejs_latest_data : data_latest,
+                ejs_politics_data : data_politics,
+                ejs_business_data : data_business
+            });
+        }, 1000);
+        
     }
 
     

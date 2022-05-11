@@ -60,6 +60,19 @@ app.get("/", (req, res)=>{
         res.render("error", {});
     }
     else{
+
+        data_latest.data.forEach((val)=>{
+            val.time = val.time.slice(0, 10);
+        });
+
+        data_politics.data.forEach((val)=>{
+            val.time = val.time.slice(0, 10);
+        });
+
+        data_business.data.forEach((val)=>{
+            val.time = val.time.slice(0, 10);
+        });
+        
         
         // data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
         // data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
@@ -111,6 +124,12 @@ app.get("/:category_name", (req, res)=>{
         res.render("error", {});
     }
     else{
+
+
+        // category_data.data[5].slice(1, 10);
+        category_data.data.forEach((val)=>{
+            val.time = val.time.slice(0, 10);
+        });
 
         //sorting data
         // category_data.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);

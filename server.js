@@ -60,19 +60,20 @@ app.get("/", (req, res)=>{
         res.render("error", {});
     }
     else{
-        data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
-        data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
-        data_latest.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
+        
+        // data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
+        // data_latest.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
+        // data_latest.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
         
 
-        data_politics.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
-        data_politics.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
-        data_politics.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
+        // data_politics.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
+        // data_politics.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
+        // data_politics.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
 
 
-        data_business.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
-        data_business.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
-        data_business.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
+        // data_business.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
+        // data_business.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
+        // data_business.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
 
 
 
@@ -112,9 +113,9 @@ app.get("/:category_name", (req, res)=>{
     else{
 
         //sorting data
-        category_data.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
-        category_data.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
-        category_data.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
+        // category_data.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1);
+        // category_data.data.sort((a, b) => (a.date < b.date) ? 1 : (a.date === b.date) ? ((a.time.slice(6, 8) < b.time.slice(6, 8)) ? 1 : -1) : -1);
+        // category_data.data.sort((a, b) => (month.get(a.date.slice(3, 6)) < month.get(b.date.slice(3, 6))) ? 1 : (month.get(a.date.slice(3, 6)) === month.get(b.date.slice(3, 6))) ? 1 : -1);
 
         res.render("news", {
             ejs_section_name : _.startCase(_.toLower(category)),
@@ -184,8 +185,9 @@ app.post("/", (req, res)=>{
 
 function collect_data(){
 
-    const urls = ["https://inshortsapi.vercel.app/news?category=all"];
-    let link = "https://inshortsapi.vercel.app/news?category=";
+    // https://inshortsv2.vercel.app/news?type=all_news&limit=30
+    const urls = ["https://inshorts-news.vercel.app/all"];
+    let link = "https://inshorts-news.vercel.app/";
 
     urls.push(link + "politics");
     urls.push(link + "business");

@@ -208,7 +208,7 @@ function collect_data(){
             // console.log(fetched_data);
         })
         .catch((err)=>{
-            res.redirect("error", {});
+            //res.redirect("error", {});
         })
     };
 

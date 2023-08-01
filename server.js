@@ -184,8 +184,8 @@ app.post("/", (req, res)=>{
 
 function collect_data(){
 
-    const urls = ["https://inshorts.deta.dev/news?category=all"];
-    let link = "https://inshorts.deta.dev/news?category=";
+    const urls = ["https://inshortsapi.vercel.app/news?category=all"];
+    let link = "https://inshortsapi.vercel.app/news?category=";
 
     urls.push(link + "politics");
     urls.push(link + "business");

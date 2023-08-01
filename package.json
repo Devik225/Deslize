@@ -2,9 +2,8 @@
   "name": "deslize",
   "version": "1.0.0",
   "description": "News app",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
